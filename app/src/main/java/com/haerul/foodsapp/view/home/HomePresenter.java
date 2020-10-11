@@ -8,7 +8,7 @@ package com.haerul.foodsapp.view.home;
 
 import android.support.annotation.NonNull;
 
-import com.haerul.foodsapp.Utils;
+import com.haerul.foodsapp.SD;
 import com.haerul.foodsapp.model.Categories;
 import com.haerul.foodsapp.model.Meals;
 
@@ -28,7 +28,8 @@ class HomePresenter {
 
         view.showLoading();
 
-        Call<Meals> mealsCall = Utils.getApi().getMeal();
+        Call<Meals> mealsCall = SD.getApi().getMeal();
+
         mealsCall.enqueue(new Callback<Meals>() {
             @Override
             public void onResponse(@NonNull Call<Meals> call, @NonNull Response<Meals> response) {
@@ -38,8 +39,7 @@ class HomePresenter {
 
                     view.setMeal(response.body().getMeals());
 
-                }
-                else {
+                } else {
                     view.onErrorLoading(response.message());
                 }
             }
@@ -57,7 +57,7 @@ class HomePresenter {
 
         view.showLoading();
 
-        Call<Categories> categoriesCall = Utils.getApi().getCategories();
+        Call<Categories> categoriesCall = SD.getApi().getCategories();
         categoriesCall.enqueue(new Callback<Categories>() {
             @Override
             public void onResponse(@NonNull Call<Categories> call,
@@ -68,8 +68,7 @@ class HomePresenter {
 
                     view.setCategory(response.body().getCategories());
 
-                }
-                else {
+                } else {
                     view.onErrorLoading(response.message());
                 }
             }

@@ -33,7 +33,7 @@ public class ViewPagerHeaderAdapter extends PagerAdapter {
     }
 
     public void setOnItemClickListener(ClickListener clickListener) {
-        ViewPagerHeaderAdapter.clickListener = clickListener;
+        this.clickListener = clickListener;
     }
 
     @Override
@@ -72,7 +72,7 @@ public class ViewPagerHeaderAdapter extends PagerAdapter {
 
     @Override
     public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
-        container.removeView((View)object);
+        container.removeView((View) object);
     }
 
     public interface ClickListener {

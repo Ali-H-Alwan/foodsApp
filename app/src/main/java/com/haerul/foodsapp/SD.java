@@ -12,7 +12,7 @@ import android.content.Context;
 import com.haerul.foodsapp.api.FoodApi;
 import com.haerul.foodsapp.api.FoodClient;
 
-public class Utils {
+public class SD {
 
     public static FoodApi getApi() {
         return FoodClient.getFoodClient().create(FoodApi.class);

@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   Developed by Haerul Muttaqin
   Last modified 3/17/19 5:24 AM
   Subscribe : https://www.youtube.com/haerulmuttaqin
@@ -29,10 +28,12 @@
         </activity>
         <activity
             android:name=".view.category.CategoryActivity"
-            android:theme="@style/AppTheme"
+            android:label="Category"
             android:screenOrientation="portrait"
-            android:label="Category"/>
-        <!--TODO #1 Add DetailActivity -->
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".view.detail.DetailActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

@@ -78,7 +78,7 @@ public class RecyclerViewHomeAdapter extends RecyclerView.Adapter<RecyclerViewHo
 
 
     public void setOnItemClickListener(ClickListener clickListener) {
-        RecyclerViewHomeAdapter.clickListener = clickListener;
+        this.clickListener = clickListener;
     }
 
 
